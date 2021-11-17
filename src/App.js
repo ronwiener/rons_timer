@@ -122,11 +122,12 @@ function App() {
               <Typography
                 variant="h4"
                 style={{
-                  fontSize: matchesSM ? "1.5rem" : "2.5rem",
+                  fontSize: matchesSM ? "1.35rem" : "2.5rem",
                   letterSpacing: "0.10rem",
                   fontWeight: "bold",
                   color: "#051293",
                   marginTop: matchesSM ? 90 : 30,
+                  marginRight: matchesSM ? 15 : null,
                 }}
               >
                 Loop Count: {loopCount}
