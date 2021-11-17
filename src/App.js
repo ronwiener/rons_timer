@@ -126,7 +126,7 @@ function App() {
                   letterSpacing: "0.10rem",
                   fontWeight: "bold",
                   color: "#051293",
-                  marginTop: matchesSM ? 60 : 30,
+                  marginTop: matchesSM ? 90 : 30,
                 }}
               >
                 Loop Count: {loopCount}
@@ -149,8 +149,8 @@ function App() {
                   alignItems: "center",
                   marginBottom: 10,
                   borderStyle: "solid",
-                  borderWidth: "1.5px",
-                  borderColor: "black",
+                  borderWidth: "1px",
+                  borderColor: "gray",
                   borderRadius: 5,
                   width: matchesSM ? 170 : 300,
                 }}
@@ -179,8 +179,8 @@ function App() {
                   alignItems: "center",
                   marginBottom: 10,
                   borderStyle: "solid",
-                  borderWidth: 1.5,
-                  borderColor: "black",
+                  borderWidth: "1px",
+                  borderColor: "grey",
                   borderRadius: 5,
                   width: matchesSM ? 170 : 300,
                 }}
