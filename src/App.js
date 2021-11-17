@@ -7,7 +7,9 @@ import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const renderTime = ({ remainingTime }) => {
+const RenderTime = ({ remainingTime }) => {
+  const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const minutes = Math.floor(remainingTime / 60);
   const seconds = ("0" + (remainingTime % 60)).slice(-2);
 
@@ -33,14 +35,14 @@ const renderTime = ({ remainingTime }) => {
       <div
         style={{
           color: "#b00c22",
-          fontSize: "1.5rem",
+          fontSize: matchesSM ? "1.5rem" : "2rem",
           fontWeight: "bold",
           letterSpacing: "0.1em",
         }}
       >
         {remainingTime > 31 ? "RECOVER" : "SPRINT!!!"}
       </div>
-      <div>
+      <div style={{ fontSize: matchesSM ? "1.75rem" : "2.75rem" }}>
         {minutes}:{seconds}
       </div>
     </div>
@@ -52,9 +54,6 @@ const useStyles = makeStyles({
     backgroundImage: `url("https://res.cloudinary.com/ron7602/image/upload/o_79/v1636639431/bike.jpg")`,
     height: "100vh",
     textAlign: "center",
-    fontSize: "3em",
-    fontWeight: "bold",
-    backgroundAttachment: "fixed",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -67,7 +66,7 @@ function App() {
   const [loopCount, setLoopCount] = useState(0);
   const theme = useTheme();
   const classes = useStyles();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <ThemeProvider theme={theme}>
       <Grid container direction="column">
@@ -88,17 +87,17 @@ function App() {
             item
             container
             direction="column"
-            style={{ marginTop: matchesSM ? 230 : 80 }}
+            style={{ marginTop: matchesSM ? 0 : 30 }}
           >
             <Grid item container justifyContent="center">
               <CountdownCircleTimer
                 key={loopCount}
                 key={key}
                 isPlaying={play}
-                size={matchesSM ? 210 : 260}
+                size={matchesSM ? 160 : 260}
                 trailColor={"#adada9"}
                 trailStrokeWidth={0}
-                strokeWidth={matchesSM ? 12 : 18}
+                strokeWidth={matchesSM ? 10 : 18}
                 duration={120}
                 colors={[["#004777", 0.33], ["#07804b", 0.33], ["#A30000"]]}
                 onComplete={() => [
@@ -107,7 +106,7 @@ function App() {
                   setLoopCount((loopCount) => loopCount + 1),
                 ]}
               >
-                {renderTime}
+                <RenderTime />
               </CountdownCircleTimer>
             </Grid>
 
@@ -123,11 +122,11 @@ function App() {
               <Typography
                 variant="h4"
                 style={{
-                  fontSize: matchesSM ? 30 : 40,
+                  fontSize: matchesSM ? 20 : 40,
                   letterSpacing: "0.10rem",
                   fontWeight: "bold",
                   color: "#051293",
-                  marginTop: matchesSM ? 20 : 30,
+                  marginTop: matchesSM ? 10 : 30,
                 }}
               >
                 Loop Count: {loopCount}
@@ -148,17 +147,27 @@ function App() {
                   backgroundColor: "#07804b",
                   padding: 5,
                   alignItems: "center",
-                  marginTop: 10,
+
                   marginBottom: 10,
                   borderWidth: 1.5,
                   borderColor: "black",
                   borderRadius: 5,
-                  width: 300,
+                  width: matchesSM ? 170 : 300,
                 }}
                 variant="contained"
                 onClick={() => setPlay((play) => !play)}
               >
-                Start/Stop Timer
+                <Typography
+                  style={{
+                    color: "white",
+                    fontSize: matchesSM ? 12 : 16,
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    letterSpacing: 1.5,
+                  }}
+                >
+                  Start/Stop Timer
+                </Typography>
               </Button>
             </Grid>
             <Grid item container justifyContent="center">
@@ -172,7 +181,7 @@ function App() {
                   borderWidth: 1.5,
                   borderColor: "black",
                   borderRadius: 5,
-                  width: 300,
+                  width: matchesSM ? 170 : 300,
                 }}
                 variant="contained"
                 onClick={() => setKey((prevKey) => prevKey + 1)}
@@ -180,7 +189,7 @@ function App() {
                 <Typography
                   style={{
                     color: "white",
-                    fontSize: 16,
+                    fontSize: matchesSM ? 12 : 16,
                     fontWeight: "bold",
                     textAlign: "center",
                     letterSpacing: 1.5,
