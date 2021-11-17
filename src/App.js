@@ -42,7 +42,12 @@ const RenderTime = ({ remainingTime }) => {
       >
         {remainingTime > 31 ? "RECOVER" : "SPRINT!!!"}
       </div>
-      <div style={{ fontSize: matchesSM ? "1.75rem" : "2.75rem" }}>
+      <div
+        style={{
+          fontSize: matchesSM ? "1.75rem" : "2.75rem",
+          fontWeight: "bold",
+        }}
+      >
         {minutes}:{seconds}
       </div>
     </div>
