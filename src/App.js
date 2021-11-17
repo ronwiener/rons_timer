@@ -122,11 +122,11 @@ function App() {
               <Typography
                 variant="h4"
                 style={{
-                  fontSize: matchesSM ? 20 : 40,
+                  fontSize: matchesSM ? "1.5rem" : "2.5rem",
                   letterSpacing: "0.10rem",
                   fontWeight: "bold",
                   color: "#051293",
-                  marginTop: matchesSM ? 10 : 30,
+                  marginTop: matchesSM ? 60 : 30,
                 }}
               >
                 Loop Count: {loopCount}
@@ -137,7 +137,7 @@ function App() {
               container
               justifyContent="center"
               style={{
-                marginTop: matchesSM ? 50 : 30,
+                marginTop: matchesSM ? 10 : 40,
                 marginBottom: matchesSM ? 20 : 30,
               }}
             >
@@ -147,9 +147,9 @@ function App() {
                   backgroundColor: "#07804b",
                   padding: 5,
                   alignItems: "center",
-
                   marginBottom: 10,
-                  borderWidth: 1.5,
+                  borderStyle: "solid",
+                  borderWidth: "1.5px",
                   borderColor: "black",
                   borderRadius: 5,
                   width: matchesSM ? 170 : 300,
@@ -178,6 +178,7 @@ function App() {
                   padding: 5,
                   alignItems: "center",
                   marginBottom: 10,
+                  borderStyle: "solid",
                   borderWidth: 1.5,
                   borderColor: "black",
                   borderRadius: 5,
