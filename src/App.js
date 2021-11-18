@@ -35,16 +35,16 @@ const RenderTime = ({ remainingTime }) => {
       <div
         style={{
           color: "#b00c22",
-          fontSize: matchesSM ? "1.5rem" : "2rem",
+          fontSize: matchesSM ? "1.75rem" : "2rem",
           fontWeight: "bold",
           letterSpacing: "0.1em",
         }}
       >
-        {remainingTime > 31 ? "RECOVER" : "SPRINT!!!"}
+        {remainingTime > 30 ? "RECOVER" : "SPRINT!!!"}
       </div>
       <div
         style={{
-          fontSize: matchesSM ? "1.75rem" : "2.75rem",
+          fontSize: matchesSM ? "1.95rem" : "2.75rem",
           fontWeight: "bold",
         }}
       >
@@ -99,7 +99,7 @@ function App() {
                 key={loopCount}
                 key={key}
                 isPlaying={play}
-                size={matchesSM ? 160 : 260}
+                size={matchesSM ? 190 : 260}
                 trailColor={"#adada9"}
                 trailStrokeWidth={0}
                 strokeWidth={matchesSM ? 10 : 18}
