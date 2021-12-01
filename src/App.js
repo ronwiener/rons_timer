@@ -183,7 +183,7 @@ function App() {
                   backgroundColor: "#96082b",
                   padding: 5,
                   alignItems: "center",
-                  marginBottom: 20,
+                  marginBottom: 10,
                   borderStyle: "solid",
                   borderWidth: "1px",
                   borderColor: "grey",
