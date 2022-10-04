@@ -96,7 +96,7 @@ function App() {
           >
             <Grid item container justifyContent="center">
               <CountdownCircleTimer
-                key={loopCount}
+                //key={loopCount}
                 key={key}
                 isPlaying={play}
                 size={matchesSM ? 190 : 260}
@@ -135,7 +135,8 @@ function App() {
                   marginRight: matchesSM ? 15 : null,
                 }}
               >
-                Loop Count: {loopCount}
+                Completed: {loopCount}
+                {loopCount >= 7 ? <div>"Just One More!"</div> : undefined}
               </Typography>
             </Grid>
             <Grid
