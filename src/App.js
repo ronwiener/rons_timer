@@ -72,6 +72,7 @@ function App() {
   const theme = useTheme();
   const classes = useStyles();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container direction="column">
@@ -104,6 +105,7 @@ function App() {
                 trailStrokeWidth={0}
                 strokeWidth={matchesSM ? 10 : 18}
                 duration={120}
+                initialRemainingTime={30}
                 colors={[["#004777", 0.33], ["#07804b", 0.33], ["#A30000"]]}
                 onComplete={() => [
                   true,
@@ -136,7 +138,11 @@ function App() {
                 }}
               >
                 Completed: {loopCount}
-                {loopCount >= 7 ? <div>"Just One More!"</div> : undefined}
+                {loopCount === 7 ? (
+                  <div>"Just One More!"</div>
+                ) : (
+                  <div>"You can do this!"</div>
+                )}
               </Typography>
             </Grid>
             <Grid
