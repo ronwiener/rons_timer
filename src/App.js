@@ -73,6 +73,26 @@ function App() {
   const classes = useStyles();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
+  const encouragement = (loopCount) => {
+    if (loopCount === 1) {
+      return "One down 7 to go!";
+    } else if (loopCount === 2) {
+      return "Yes, keep it up!";
+    } else if (loopCount === 3) {
+      return "You can do this!";
+    } else if (loopCount === 4) {
+      return "Stay motivated!!";
+    } else if (loopCount === 5) {
+      return "More than half way!";
+    } else if (loopCount === 6) {
+      return "Focus Focus Focus!!!";
+    } else if (loopCount === 7) {
+      return "Just one more!";
+    } else if (loopCount > 7) {
+      return "YOU DID IT!!";
+    } else return;
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container direction="column">
@@ -138,11 +158,19 @@ function App() {
                 }}
               >
                 Completed: {loopCount}
+                <div>
+                  <span style={{ color: "#770FF0" }}>
+                    {encouragement(loopCount)}
+                  </span>
+                </div>
+                {/*
+             
                 {loopCount === 7 ? (
                   <div>"Just One More!"</div>
                 ) : (
                   <div>"You can do this!"</div>
                 )}
+             */}
               </Typography>
             </Grid>
             <Grid
