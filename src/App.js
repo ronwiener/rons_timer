@@ -73,22 +73,80 @@ function App() {
   const classes = useStyles();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
+  let One = [
+    "One down 7 to go",
+    "You got this",
+    "Whew, 7 more",
+    "Ok, not so bad",
+    "Workin' it 😬",
+  ];
+  const Quote1 = One[Math.floor(Math.random() * One.length)];
+
+  let Two = [
+    "That's 2, good job",
+    "Keep it going!",
+    "Hang in there",
+    "Yes, keep it up",
+    "Starting to sweat 😰",
+  ];
+  const Quote2 = Two[Math.floor(Math.random() * Two.length)];
+
+  let Three = [
+    "You can do this",
+    "No pain, no gain",
+    "Hit your goal",
+    "Stay tough",
+    "Dig down, Deep breaths",
+  ];
+  const Quote3 = Three[Math.floor(Math.random() * Three.length)];
+
+  let Four = ["Stay motivated", "Stay strong", "Four to go", "Bring it"];
+  const Quote4 = Four[Math.floor(Math.random() * Four.length)];
+
+  let Five = [
+    "More than half way there",
+    "Stay steady 🚴‍♀️",
+    "Keep the pace",
+    "Work it, work hard",
+    "Tough it out",
+  ];
+  const Quote5 = Five[Math.floor(Math.random() * Five.length)];
+
+  let Six = [
+    "Focus, focus, focus!!!",
+    "Do not give up",
+    "Almost there",
+    "Push on",
+    "Fight the pain",
+  ];
+  const Quote6 = Six[Math.floor(Math.random() * Six.length)];
+
+  let Seven = [
+    "Just one more",
+    "You are a beast",
+    "Push it to the limit",
+    "Try or Die",
+    "Adrenaline rush",
+    "Here we go, last one",
+  ];
+  const Quote7 = Seven[Math.floor(Math.random() * Seven.length)];
+
   const encouragement = (loopCount) => {
     if (loopCount === 1) {
-      return "One down 7 to go!";
+      return Quote1;
     } else if (loopCount === 2) {
-      return "Yes, keep it up!";
+      return Quote2;
     } else if (loopCount === 3) {
-      return "You can do this!";
+      return Quote3;
     } else if (loopCount === 4) {
-      return "Stay motivated!!";
+      return Quote4;
     } else if (loopCount === 5) {
-      return "More than half way!";
+      return Quote5;
     } else if (loopCount === 6) {
-      return "Focus Focus Focus!!!";
+      return Quote6;
     } else if (loopCount === 7) {
-      return "Just one more!";
-    } else if (loopCount > 7) {
+      return Quote7;
+    } else if (loopCount === 8) {
       return "YOU DID IT!!";
     } else return;
   };
@@ -163,14 +221,6 @@ function App() {
                     {encouragement(loopCount)}
                   </span>
                 </div>
-                {/*
-             
-                {loopCount === 7 ? (
-                  <div>"Just One More!"</div>
-                ) : (
-                  <div>"You can do this!"</div>
-                )}
-             */}
               </Typography>
             </Grid>
             <Grid
