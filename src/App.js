@@ -74,11 +74,15 @@ function App() {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   let One = [
+    "One rep at a time",
     "One down 7 to go",
     "You got this",
+    "Don't go easy",
     "Whew, 7 more",
     "Ok, not so bad",
     "Workin' it 😬",
+    "Breathe deep",
+    "Easy? You're doing it wrong",
   ];
   const Quote1 = One[Math.floor(Math.random() * One.length)];
 
@@ -88,6 +92,10 @@ function App() {
     "Hang in there",
     "Yes, keep it up",
     "Starting to sweat 😰",
+    "Get what you give",
+    "Make every sprint count!",
+    "No excuses, just do it",
+    "Stay tough",
   ];
   const Quote2 = Two[Math.floor(Math.random() * Two.length)];
 
@@ -95,39 +103,67 @@ function App() {
     "You can do this",
     "No pain, no gain",
     "Hit your goal",
+    "Hey warrior, keep going",
     "Stay tough",
+    "Ride or die",
+    "KEEP GOING!",
+    "Get bold",
     "Dig down, Deep breaths",
+    "Time to sweat",
+    "It's too soon to quit",
   ];
   const Quote3 = Three[Math.floor(Math.random() * Three.length)];
 
-  let Four = ["Stay motivated", "Stay strong", "Four to go", "Bring it"];
+  let Four = [
+    "Stay motivated",
+    "Never give up",
+    "Stay strong",
+    "Four to go",
+    "Bring it",
+    "You are gold baby",
+    "It's hell, but keep going",
+    "Make it happen",
+    "Push yourself",
+    "I think I can, I know I can",
+  ];
   const Quote4 = Four[Math.floor(Math.random() * Four.length)];
 
   let Five = [
     "More than half way there",
     "Stay steady 🚴‍♀️",
+    "Work for it!",
     "Keep the pace",
+    "You da Man",
     "Work it, work hard",
+    "The pain is only temporary",
     "Tough it out",
+    "Tired? Do it anyway",
   ];
   const Quote5 = Five[Math.floor(Math.random() * Five.length)];
 
   let Six = [
     "Focus, focus, focus!!!",
+    "No guts, no glory",
     "Do not give up",
+    "Just 2 more",
     "Almost there",
     "Push on",
     "Fight the pain",
+    "You are strong!",
   ];
   const Quote6 = Six[Math.floor(Math.random() * Six.length)];
 
   let Seven = [
+    "Fall seven times, stand up eight",
     "Just one more",
+    "I can and I will",
     "You are a beast",
+    "Shut up, Legs",
     "Push it to the limit",
     "Try or Die",
     "Adrenaline rush",
     "Here we go, last one",
+    "I can and I will!!",
   ];
   const Quote7 = Seven[Math.floor(Math.random() * Seven.length)];
 
@@ -147,7 +183,7 @@ function App() {
     } else if (loopCount === 7) {
       return Quote7;
     } else if (loopCount === 8) {
-      return "YOU DID IT!!";
+      return "YOU ARE AMAZING!!";
     } else return;
   };
 
