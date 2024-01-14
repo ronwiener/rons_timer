@@ -167,6 +167,15 @@ function App() {
   ];
   const Quote7 = Seven[Math.floor(Math.random() * Seven.length)];
 
+  let Eight = [
+    "You are Amazing!",
+    "YOU DID IT!",
+    "Great Job",
+    "Fit to Win",
+    "Rest and Recover",
+  ];
+  const Quote8 = Eight[Math.floor(Math.random() * Eight.length)];
+
   const encouragement = (loopCount) => {
     if (loopCount === 1) {
       return Quote1;
@@ -183,7 +192,7 @@ function App() {
     } else if (loopCount === 7) {
       return Quote7;
     } else if (loopCount === 8) {
-      return "YOU ARE AMAZING!!";
+      return Quote8;
     } else return;
   };
 
