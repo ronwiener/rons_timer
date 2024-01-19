@@ -171,7 +171,7 @@ function App() {
     "You are Amazing!",
     "YOU DID IT!",
     "Great Job",
-    "Fit to Win",
+    "No Mas, No Mas!",
     "Rest and Recover",
   ];
   const Quote8 = Eight[Math.floor(Math.random() * Eight.length)];
@@ -262,7 +262,7 @@ function App() {
               >
                 Completed: {loopCount}
                 <div>
-                  <span style={{ color: "#770FF0" }}>
+                  <span style={{ color: "#FFFFFF" }}>
                     {encouragement(loopCount)}
                   </span>
                 </div>
