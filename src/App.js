@@ -40,7 +40,7 @@ const RenderTime = ({ remainingTime }) => {
           letterSpacing: "0.1em",
         }}
       >
-        {remainingTime > 30 ? "RECOVER" : "SPRINT!!!"}
+        {remainingTime < 180 ? "RECOVER" : "SPRINT!!!"}
       </div>
       <div
         style={{
@@ -227,8 +227,8 @@ function App() {
                 trailColor={"#adada9"}
                 trailStrokeWidth={0}
                 strokeWidth={matchesSM ? 10 : 18}
-                duration={120}
-                initialRemainingTime={30}
+                duration={420}
+                initialRemainingTime={420}
                 colors={[["#004777", 0.33], ["#07804b", 0.33], ["#A30000"]]}
                 onComplete={() => [
                   true,
