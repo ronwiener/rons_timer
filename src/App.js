@@ -266,12 +266,12 @@ function App(remainingTime) {
                   <GradientText
                     colors={[
                       "#40ffaa",
-                      "#4079ff",
+                      "#0B379DFF",
                       "#40ffaa",
-                      "#4079ff",
+                      "#0B379DFF",
                       "#40ffaa",
                     ]}
-                    animationSpeed={3}
+                    animationSpeed={5}
                     showBorder={false}
                     className="custom-class"
                   >
