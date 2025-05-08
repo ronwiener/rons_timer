@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import GradientText from "./GradientText";
 
 const RenderTime = ({ remainingTime }) => {
   const theme = useTheme();
@@ -40,7 +41,7 @@ const RenderTime = ({ remainingTime }) => {
           letterSpacing: "0.1em",
         }}
       >
-        {remainingTime < 90 ? "SPRINT!!!" : "RECOVER"}
+        {remainingTime < 31 ? "SPRINT!!!" : "RECOVER"}
       </div>
       <div
         style={{
@@ -80,7 +81,7 @@ function App(remainingTime) {
     "Don't go easy",
     "Whew, 7 more",
     "Ok, not so bad",
-    "Workin' it 😬",
+    "Workin' it",
     "Breathe deep",
     "Easy? You're doing it wrong",
   ];
@@ -91,7 +92,7 @@ function App(remainingTime) {
     "Keep it going!",
     "Hang in there",
     "Yes, keep it up",
-    "Starting to sweat 😰",
+    "Starting to sweat",
     "Get what you give",
     "Make every sprint count!",
     "No excuses, just do it",
@@ -130,7 +131,7 @@ function App(remainingTime) {
 
   let Five = [
     "More than half way there",
-    "Stay steady 🚴‍♀️",
+    "Stay steady",
     "Work for it!",
     "Keep the pace",
     "You da Man",
@@ -262,9 +263,24 @@ function App(remainingTime) {
               >
                 Completed: {loopCount}
                 <div>
-                  <span style={{ color: "#FFFFFF" }}>
+                  <GradientText
+                    colors={[
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                    ]}
+                    animationSpeed={3}
+                    showBorder={false}
+                    className="custom-class"
+                  >
                     {encouragement(loopCount)}
-                  </span>
+                  </GradientText>
+
+                  {/*  <span style={{ color: "#FFFFFF" }}>
+                    {encouragement(loopCount)}
+                  </span> */}
                 </div>
               </Typography>
             </Grid>
