@@ -210,7 +210,7 @@ function App(remainingTime) {
                 color: "darkblue",
               }}
             >
-              Countdown Timer
+              The Punisher
             </Typography>
           </Grid>
           <Grid
